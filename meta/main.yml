@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: ruby
+  role_name: terraforming
   author: Ali Muhammad
   description: Terraforming installation/uninstallation role to pull down terraform resources.
   company: none
