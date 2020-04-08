@@ -1,0 +1,10 @@
+---
+# defaults file for terraforming
+
+ruby_app_debian_package: ruby-full
+ruby_app_el_package: ruby
+ruby_desired_state: present
+terraforming_app: terraforming
+terraforming_desired_state: present
+terraforming_user_install: no
+terraforming_include_dependencies: yes

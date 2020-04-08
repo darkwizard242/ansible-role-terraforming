@@ -1,0 +1,21 @@
+---
+# tasks file for terraforming - CentOS
+
+- name: Installing epel-release on EL systems
+  package:
+    name: epel-release
+    state: present
+    update_cache: yes
+
+- name: "Installing {{ ruby_app_el_package }} on EL based systems as required for {{ terraforming_app }}"
+  package:
+    name: "{{ ruby_app_el_package }}"
+    state: "{{ ruby_desired_state }}"
+    update_cache: yes
+
+- name: "Installing {{ terraforming_app }} on EL based systems"
+  gem:
+    name: "{{ terraforming_app }}"
+    state: "{{ terraforming_desired_state }}"
+    user_install: "{{ terraforming_user_install }}"
+    include_dependencies: "{{ terraforming_include_dependencies }}"
