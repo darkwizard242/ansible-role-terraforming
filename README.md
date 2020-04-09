@@ -15,8 +15,8 @@ Available variables are listed below (located in `defaults/main.yml`):
 ### Variables list:
 
 ```yaml
-ruby_app_debian_package: terraforming-full
-ruby_app_el_package: terraforming
+ruby_app_debian_package: ruby-full
+ruby_app_el_package: ruby
 ruby_desired_state: present
 terraforming_app: terraforming
 terraforming_desired_state: present
