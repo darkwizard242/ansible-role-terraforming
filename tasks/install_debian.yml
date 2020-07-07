@@ -1,14 +1,14 @@
 ---
-# tasks file for terraforming - Debian
+# tasks file for terraforming - Debian/Ubuntu Family
 
-- name: "Installing {{ ruby_app_debian_package }} on Debian based systems as required for {{ terraforming_app }}"
+- name: Debian/Ubuntu Family | Installing {{ ruby_app_debian_package }} as required for {{ terraforming_app }}
   package:
     name: "{{ ruby_app_debian_package }}"
     state: "{{ ruby_desired_state }}"
     force_apt_get: yes
     update_cache: yes
 
-- name: "Installing {{ terraforming_app }} on Debian based systems"
+- name: Debian/Ubuntu Family | Installing {{ terraforming_app }}
   gem:
     name: "{{ terraforming_app }}"
     state: "{{ terraforming_desired_state }}"
