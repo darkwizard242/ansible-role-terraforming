@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: terraforming
-  author: Ali Muhammad
+  author: darkwizard242
   description: Terraforming installation/uninstallation role to pull down terraform resources.
   company: none
   license: MIT
