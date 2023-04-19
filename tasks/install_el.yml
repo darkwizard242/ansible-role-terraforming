@@ -2,19 +2,19 @@
 # tasks file for terraforming - EL Family
 
 - name: EL Family | Installing epel-release
-  package:
+  ansible.builtin.package:
     name: epel-release
     state: present
     update_cache: yes
 
 - name: EL Family | Installing {{ ruby_app_el_package }} as required for {{ terraforming_app }}"
-  package:
+  ansible.builtin.package:
     name: "{{ ruby_app_el_package }}"
     state: "{{ ruby_desired_state }}"
     update_cache: yes
 
 - name: EL Family | Installing {{ terraforming_app }}
-  gem:
+  ansible.builtin.gem:
     name: "{{ terraforming_app }}"
     state: "{{ terraforming_desired_state }}"
     user_install: "{{ terraforming_user_install }}"

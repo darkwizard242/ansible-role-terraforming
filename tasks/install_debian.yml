@@ -2,14 +2,14 @@
 # tasks file for terraforming - Debian/Ubuntu Family
 
 - name: Debian/Ubuntu Family | Installing {{ ruby_app_debian_package }} as required for {{ terraforming_app }}
-  package:
+  ansible.builtin.package:
     name: "{{ ruby_app_debian_package }}"
     state: "{{ ruby_desired_state }}"
     force_apt_get: yes
     update_cache: yes
 
 - name: Debian/Ubuntu Family | Installing {{ terraforming_app }}
-  gem:
+  ansible.builtin.gem:
     name: "{{ terraforming_app }}"
     state: "{{ terraforming_desired_state }}"
     user_install: "{{ terraforming_user_install }}"
